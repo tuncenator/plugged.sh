@@ -144,7 +144,7 @@ prepare(){
     echo "Installing required packages..."
     yum install -y http://rpms.remirepo.net/enterprise/remi-release-7.rpm
     yum install -y yum-utils
-    curl -sS https://downloads.mariadb.com/MariaDB/mariadb_repo_setup | sudo bash
+    curl -sS https://downloads.mariadb.com/MariaDB/mariadb_repo_setup | bash
     yum-config-manager --enable remi-php"${PHPVER}"
     if [[ $PHPVER != "54" ]] || [[ $PHPVER != "56" ]]; then
         yum-config-manager --enable remi
